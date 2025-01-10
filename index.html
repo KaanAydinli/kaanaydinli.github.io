@@ -10,10 +10,11 @@
         background: linear-gradient(
           60deg,
           #2c2c2c 0%,
-          #313244 45%,
-          #1f1f34 70%,
+          #44475a 45%,
+          #282a36 70%,
           #1c1c3a 100%
         );
+
         overflow: hidden;
         height: 100vh;
         background-size: cover;
@@ -49,13 +50,18 @@
 
         color: #e0e0e0;
       }
-
+      .anka:hover {
+        
+        transform: scale(1.1); 
+        filter: drop-shadow(#ffeabb 0px 0px 10px); 
+        cursor: pointer; 
+      }
       .anka {
         width: 20%;
         height: 50%;
 
-        filter: drop-shadow(#ffb81f 0px 0px 10px); /* Glowing red effect */
-        mask-image: url("/images/anka.webp"); /* Use the image itself as the mask */
+        filter: drop-shadow(#ffb81f 0px 0px 10px); 
+        mask-image: url("/images/anka.webp"); 
         display: block;
         margin-top: 5%;
         margin-bottom: 15%;
@@ -138,7 +144,7 @@
 
       const a = document.querySelector(".ankaName");
       a.addEventListener("animationend", () => {
-         a.textContent = "KAAN";
+        a.textContent = "KAAN";
       });
 
       function change() {
@@ -148,7 +154,7 @@
         document.querySelector(
           ".ankaName span:nth-child(1)"
         ).style.animationPlayState = "running";
-        
+
         document.querySelector(".ankaName span:nth-child(2)").style.animation =
           "a2 3s 1";
         document.querySelector(
