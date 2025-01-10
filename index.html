@@ -27,6 +27,7 @@
         text-align: center;
         font-size: 80px;
         font-family: "Courier New", Courier, monospace;
+
       }
       .About {
         display: block;
@@ -36,6 +37,10 @@
         font-size: 30px;
         text-shadow: #e0e0e0 0px 0px 10px, #e0e0e0 0px 0px 30px,
           #e0e0e0 0px 0px 60px;
+          
+          animation-name: fadeIn;
+          animation-duration: 1s;
+          
 
         color: #e0e0e0;
       }
@@ -48,32 +53,57 @@
         text-shadow: #e0e0e0 0px 0px 10px, #e0e0e0 0px 0px 30px,
           #e0e0e0 0px 0px 60px;
 
+          animation-name: fadeIn;
+          animation-duration: 1s;
+
         color: #e0e0e0;
       }
+      @keyframes fadeOut {
+        0% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+        100% {
+          opacity: 0;
+          transform: translateY(-20px);
+        }
+      }
+
+      @keyframes fadeIn {
+        0% {
+          opacity: 0;
+          transform: translateY(40px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
       .anka:hover {
-        
-        transform: scale(1.1); 
-        filter: drop-shadow(#ffeabb 0px 0px 10px); 
-        cursor: pointer; 
+        transform: scale(1.1);
+        filter: drop-shadow(#ffeabb 0px 0px 10px);
+        cursor: pointer;
       }
       .anka {
         width: 20%;
         height: 50%;
 
-        filter: drop-shadow(#ffb81f 0px 0px 10px); 
-        mask-image: url("/images/anka.webp"); 
+        filter: drop-shadow(#ffb81f 0px 0px 10px);
+        mask-image: url("/images/anka.webp");
         display: block;
         margin-top: 5%;
         margin-bottom: 15%;
         margin-left: auto;
         margin-right: auto;
         border-radius: 200px;
+        animation-name: fadeIn;
+        animation-duration: 2s;
       }
       span {
         display: inline-block;
         color: #2c2c2c;
       }
-      .ankaName span:nth-child(1) {
+      /* .ankaName span:nth-child(1) {
         animation: a1 3s 1;
         animation-play-state: paused;
       }
@@ -88,7 +118,7 @@
       .ankaName span:nth-child(4) {
         animation: a4 3s 1;
         animation-play-state: paused;
-      }
+      } */
       @keyframes a1 {
         0% {
           transform: rotate(-180deg) translatex(0px) rotate(-180deg);
@@ -138,22 +168,43 @@
     <a class="Projects" href="project/project.html"> My Projects</a>
 
     <script>
+      
       document.querySelector(".anka").addEventListener("click", () => {
+        
         change();
+
+
       });
 
-      const a = document.querySelector(".ankaName");
+      const a = document.querySelector(".ankaName span:nth-child(1)");
       a.addEventListener("animationend", () => {
-        a.textContent = "KAAN";
-      });
+        let y = a.textContent.trim(); // Trim any extra spaces or line breaks
 
+        if(y == "A"){
+          document.querySelector(".ankaName span:nth-child(1)").textContent = "K";
+          document.querySelector(".ankaName span:nth-child(2)").textContent = "A";
+          document.querySelector(".ankaName span:nth-child(3)").textContent = "A";
+          document.querySelector(".ankaName span:nth-child(4)").textContent = "N";
+        }
+        else if(y == "K"){
+          document.querySelector(".ankaName span:nth-child(1)").textContent = "A";
+          document.querySelector(".ankaName span:nth-child(2)").textContent = "N";
+          document.querySelector(".ankaName span:nth-child(3)").textContent = "K";
+          document.querySelector(".ankaName span:nth-child(4)").textContent = "A";
+        }
+
+        document.querySelector(".ankaName span:nth-child(1)").style.animation = null;
+        document.querySelector(".ankaName span:nth-child(2)").style.animation = null;
+        document.querySelector(".ankaName span:nth-child(3)").style.animation = null;
+        document.querySelector(".ankaName span:nth-child(4)").style.animation = null;
+      });
+      
       function change() {
+
         document.querySelector(".ankaName span:nth-child(1)").style.animation =
           "a1 3s 1";
 
-        document.querySelector(
-          ".ankaName span:nth-child(1)"
-        ).style.animationPlayState = "running";
+
 
         document.querySelector(".ankaName span:nth-child(2)").style.animation =
           "a2 3s 1";
