@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Portfolio</title>
+    <style>
+      body {
+        background: linear-gradient(
+          60deg,
+          #2c2c2c 0%,
+          #313244 45%,
+          #1f1f34 70%,
+          #1c1c3a 100%
+        );
+        overflow: hidden;
+        height: 100vh;
+        background-size: cover;
+      }
+      .ankaName {
+        text-shadow: #e0e0e0 0px 0px 10px, #e0e0e0 0px 0px 30px,
+          #e0e0e0 0px 0px 60px;
+        color: #2c2c2c;
+        position: relative;
+        text-align: center;
+        font-size: 80px;
+        font-family: "Courier New", Courier, monospace;
+      }
+      .About {
+        display: block;
+        position: absolute;
+        bottom: 40px;
+        left: 130px;
+        font-size: 30px;
+        text-shadow: #e0e0e0 0px 0px 10px, #e0e0e0 0px 0px 30px,
+          #e0e0e0 0px 0px 60px;
+
+        color: #e0e0e0;
+      }
+      .Projects {
+        display: block;
+        position: absolute;
+        bottom: 40px;
+        right: 130px;
+        font-size: 30px;
+        text-shadow: #e0e0e0 0px 0px 10px, #e0e0e0 0px 0px 30px,
+          #e0e0e0 0px 0px 60px;
+
+        color: #e0e0e0;
+      }
+
+      .anka {
+        width: 400px;
+        height: 600px;
+
+        filter: drop-shadow(#ffb81f 0px 0px 10px); /* Glowing red effect */
+        mask-image: url("/images/anka.webp"); /* Use the image itself as the mask */
+        display: block;
+        margin-top: 5%;
+        margin-bottom: 15%;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 200px;
+      }
+      span {
+        display: inline-block;
+        color: #2c2c2c;
+      }
+      .ankaName span:nth-child(1) {
+        animation: a1 3s 1;
+        animation-play-state: paused;
+      }
+      .ankaName span:nth-child(2) {
+        animation: a2 3s 1;
+        animation-play-state: paused;
+      }
+      .ankaName span:nth-child(3) {
+        animation: a3 3s 1;
+        animation-play-state: paused;
+      }
+      .ankaName span:nth-child(4) {
+        animation: a4 3s 1;
+        animation-play-state: paused;
+      }
+      @keyframes a1 {
+        0% {
+          transform: rotate(-180deg) translatex(0px) rotate(-180deg);
+        }
+
+        100% {
+          transform: rotate(0deg) translateX(200%) rotate(-0deg);
+        }
+      }
+      @keyframes a2 {
+        0% {
+          transform: rotate(180deg) translatex(0) rotate(180deg);
+        }
+
+        100% {
+          transform: rotate(0deg) translateX(200%) rotate(-0deg);
+        }
+      }
+      @keyframes a3 {
+        0% {
+          transform: rotate(-180deg) translatex(0) rotate(-180deg);
+        }
+
+        100% {
+          transform: rotate(0deg) translateX(-200%) rotate(-0deg);
+        }
+      }
+      @keyframes a4 {
+        0% {
+          transform: rotate(180deg) translatex(0) rotate(180deg);
+        }
+
+        100% {
+          transform: rotate(0deg) translateX(-200%) rotate(-0deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="ankaName">
+      <span>A</span><span>N</span><span>K</span><span>A</span>
+    </h1>
+
+    <img class="anka" src="/images/anka2.png" alt="" />
+
+    <a class="About" href="about/about.html"> About Me</a>
+    <a class="Projects" href="project/project.html"> My Projects</a>
+
+    <script>
+      document.querySelector(".anka").addEventListener("click", () => {
+        change();
+      });
+
+      const a = document.querySelector(".ankaName");
+      a.addEventListener("animationend", () => {
+         a.textContent = "KAAN";
+      });
+
+      function change() {
+        document.querySelector(".ankaName span:nth-child(1)").style.animation =
+          "a1 3s 1";
+
+        document.querySelector(
+          ".ankaName span:nth-child(1)"
+        ).style.animationPlayState = "running";
+        
+        document.querySelector(".ankaName span:nth-child(2)").style.animation =
+          "a2 3s 1";
+        document.querySelector(
+          ".ankaName span:nth-child(2)"
+        ).style.animationPlayState = "running";
+        document.querySelector(".ankaName span:nth-child(3)").style.animation =
+          "a3 3s 1";
+        document.querySelector(
+          ".ankaName span:nth-child(3)"
+        ).style.animationPlayState = "running";
+        document.querySelector(".ankaName span:nth-child(4)").style.animation =
+          "a4 3s 1";
+        document.querySelector(
+          ".ankaName span:nth-child(4)"
+        ).style.animationPlayState = "running";
+      }
+    </script>
+  </body>
+</html>
