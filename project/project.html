@@ -158,8 +158,8 @@
       document.querySelector(".desc p:nth-child(1)").textContent =
         "AdventureTime is a 2D pixel art game where only limit is your imagination. It is designed to be a sandbox game where users can create their own world and explore it. There are features like trading, mining, chopping, fighting, and many more. I'm still working on this project and adding new features.";
 
-      var x = document.querySelector(".Projects");
-      x.addEventListener("wheel", () => {
+      
+      window.addEventListener("wheel", () => {
         if (event.deltaY < 0) {
           index--;
         } else if (event.deltaY > 0) {
@@ -173,7 +173,7 @@
         scrollProject(index);
       });
 
-      window.addEventListener("mouse", (event) => {});
+
       function backNormal() {
         document.querySelector(".AdventureTime").style.boxShadow = "";
         document.querySelector(".MyRoom").style.boxShadow = "";
