@@ -21,6 +21,7 @@
 
       h2 {
         color: #1a1a1a;
+        margin-top: 3%;
         text-shadow: #e0e0e0 0px 0px 10px, #e0e0e0 0px 0px 20px,
           #e0e0e0 0px 0px 40px;
         text-align: center;
@@ -30,61 +31,78 @@
       p {
         color: #e0e0e0;
 
-        text-align: center;
-        font-size: 1.5vw;
+        text-align: left;
+        margin-left: 5%;
+        margin-right: 5%;
+        font-size: 1.4vw;
         font-family: "Courier New", Courier, monospace;
       }
       .Who {
-        border: 5px solid #343231;
-        box-shadow: #e0e0e0 0px 0px 10px, #e0e0e0 0px 0px 20px,
-          #e0e0e0 0px 0px 40px;
+        
+        /* box-shadow: #e0e0e0 0px 0px 10px, #e0e0e0 0px 0px 20px,
+          #e0e0e0 0px 0px 40px; */
 
         border-radius: 100px;
 
-        width: 30%;
+        width: 25%;
         height: 90%;
-        margin-top: 1%;
+        margin-top: -5%;
         display: relative;
       }
       .What {
-        border: 5px solid #343231;
-        box-shadow: #e0e0e0 0px 0px 10px, #e0e0e0 0px 0px 20px,
-          #e0e0e0 0px 0px 40px;
+        
+        /* box-shadow: #e0e0e0 0px 0px 10px, #e0e0e0 0px 0px 20px,
+          #e0e0e0 0px 0px 40px; */
 
         border-radius: 100px;
 
-        width: 30%;
+        width: 25%;
         height: 90%;
-        margin-top: 1%;
+        margin-top: -5%;
 
         display: relative;
         text-align: justify;
       }
       .Why {
-        border: 5px solid #343231;
-        box-shadow: #e0e0e0 0px 0px 10px, #e0e0e0 0px 0px 20px,
-          #e0e0e0 0px 0px 40px;
+        
+        /* box-shadow: #e0e0e0 0px 0px 10px, #e0e0e0 0px 0px 20px,
+          #e0e0e0 0px 0px 40px; */
 
         border-radius: 100px;
 
-        width: 30%;
+        width: 25%;
         height: 90%;
-        margin-top: 1%;
+        margin-top: 0%;
         text-align: justify;
         display: relative;
+      }
+      .Why:hover {
+        box-shadow: #e0e0e0 0px 0px 10px, #e0e0e0 0px 0px 20px,
+          #e0e0e0 0px 0px 40px;
+          transform: scale(1.2);
+      }
+      .What:hover {
+        box-shadow: #e0e0e0 0px 0px 10px, #e0e0e0 0px 0px 20px,
+          #e0e0e0 0px 0px 40px;
+          transform: scale(1.2);
+      }
+      .Who:hover {
+        box-shadow: #e0e0e0 0px 0px 10px, #e0e0e0 0px 0px 20px,
+          #e0e0e0 0px 0px 40px;
+          transform: scale(1.2);
       }
       .reach {
         color: #e0e0e0;
         position: relative;
         text-align: center;
-        top: 2%;
+        top: -8%;
         height: 5%;
         
         font-size: 1vw;
       }
       span {
-        width: 210px;
-        height: 210px;
+        width: 310px;
+        height: 310px;
         position: relative;
         display: block;
         top: 50px;
@@ -105,15 +123,15 @@
       .Me {
         position: relative;
         
-        justify-content: space-evenly;
+        justify-content: space-around;
         text-align: justify;
-        width: 100%;
+        width: 99%;
         height: 47%;
         display: flex;
       }
       .self {
-        width: 200px;
-        height: 200px;
+        width: 300px;
+        height: 300px;
         position: relative;
         display: block;
         top: 50%;
@@ -123,8 +141,8 @@
         border-radius: 200px;
       }
       .anka{
-        width: 13%;
-        height: 30%;
+        width: 10%;
+        height: 18%;
         position: relative;
         display: block;
         margin-left: auto;
@@ -134,12 +152,12 @@
     </style>
   </head>
   <body>
-    <span><img class="self" src="/images/selfImage.jpg" alt="" /></span>
+    <span><img class="self" src="/images/self2.jpg" alt="" /></span>
 
     <h2>Kaan Aydınlı</h2>
     <div class="Me">
       <div class="Who">
-        <p><b>Who Am I?</b></p>
+        <p style = "text-align: center;"><b>Who Am I?</b></p>
         <p>I am a passionate Computer Science student at Bilkent University.</p>
         <p>My hobbies are playing chess, swimming, fitness, coding.</p>
         <p>I am in the Water Polo team at Bilkent.</p>
@@ -154,7 +172,7 @@
         <p></p>
       </div>
       <div class="What">
-        <p><b>What do I do?</b></p>
+        <p style = "text-align: center;"><b>What do I do?</b></p>
         <p>I have done multiple projects with Java.</p>
         <p>I'm currently learning HTML, CSS and JavaScript.</p>
         <p></p>
@@ -163,5 +181,10 @@
 
     <a href="/index.html"> Go Back</a>
     <p class="reach">Reach out to me: <em>necatikaanaydinli@gmail.com</em></p>
+
+    <script>
+
+
+    </script>
   </body>
 </html>
