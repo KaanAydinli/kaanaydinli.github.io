@@ -34,11 +34,10 @@
         text-align: left;
         margin-left: 5%;
         margin-right: 5%;
-        font-size: 1.4vw;
+        font-size: 2.5vh;
         font-family: "Courier New", Courier, monospace;
       }
       .Who {
-        
         /* box-shadow: #e0e0e0 0px 0px 10px, #e0e0e0 0px 0px 20px,
           #e0e0e0 0px 0px 40px; */
 
@@ -46,66 +45,67 @@
 
         width: 25%;
         height: 90%;
-        margin-top: -5%;
-        display: relative;
+        
+        display: absolute;
+        text-align: justify;
       }
       .What {
-        
         /* box-shadow: #e0e0e0 0px 0px 10px, #e0e0e0 0px 0px 20px,
           #e0e0e0 0px 0px 40px; */
 
         border-radius: 100px;
+        
 
-        width: 25%;
         height: 90%;
-        margin-top: -5%;
-
-        display: relative;
+        width: 25%;
+        display: absolute;
         text-align: justify;
       }
       .Why {
-        
         /* box-shadow: #e0e0e0 0px 0px 10px, #e0e0e0 0px 0px 20px,
           #e0e0e0 0px 0px 40px; */
 
         border-radius: 100px;
 
-        width: 25%;
+
         height: 90%;
+        width: 25%;
         margin-top: 0%;
+        display: absolute;
         text-align: justify;
-        display: relative;
       }
       .Why:hover {
         box-shadow: #e0e0e0 0px 0px 10px, #e0e0e0 0px 0px 20px,
           #e0e0e0 0px 0px 40px;
-          transform: scale(1.2);
+        transform: scale(1.2);
       }
       .What:hover {
         box-shadow: #e0e0e0 0px 0px 10px, #e0e0e0 0px 0px 20px,
           #e0e0e0 0px 0px 40px;
-          transform: scale(1.2);
+        transform: scale(1.2);
       }
       .Who:hover {
         box-shadow: #e0e0e0 0px 0px 10px, #e0e0e0 0px 0px 20px,
           #e0e0e0 0px 0px 40px;
-          transform: scale(1.2);
+        transform: scale(1.2);
       }
       .reach {
         color: #e0e0e0;
         position: relative;
         text-align: center;
-        top: -8%;
+        left: 50%;
+        transform: translate(-50%, 0);
+        bottom: 5px;
         height: 5%;
-        
-        font-size: 1vw;
+
+        font-size: 1.2vw;
       }
       span {
         width: 310px;
         height: 310px;
         position: relative;
         display: block;
-        top: 50px;
+
         margin-left: auto;
         margin-right: auto;
         box-shadow: #e0e0e0 0px 0px 10px, #e0e0e0 0px 0px 30px,
@@ -121,13 +121,42 @@
         font-family: "Courier New", Courier, monospace;
       }
       .Me {
-        position: relative;
-        
-        justify-content: space-around;
-        text-align: justify;
-        width: 99%;
-        height: 47%;
         display: flex;
+        
+        width: 99%;
+       
+        flex-direction: row;
+        justify-content: space-around;
+        
+       
+      }
+      @media (max-width: 800px) {
+        body{
+          overflow: visible;
+          overflow-x: hidden;
+        }
+        .Me {
+          flex-direction: column;
+          
+        }
+        .Who {
+          width: 90%;
+          height: 30%;
+          margin-top: 5%;
+          margin-left: 5%;
+        }
+        .What {
+          width: 90%;
+          height: 30%;
+          margin-top: 5%;
+          margin-left: 5%;
+        }
+        .Why {
+          width: 90%;
+          height: 30%;
+          margin-top: 5%;
+          margin-left: 5%;
+        }
       }
       .self {
         width: 300px;
@@ -140,13 +169,13 @@
 
         border-radius: 200px;
       }
-      .anka{
+      .anka {
         width: 10%;
         height: 18%;
         position: relative;
         display: block;
         margin-left: auto;
-        
+
         margin-right: auto;
       }
     </style>
@@ -157,7 +186,7 @@
     <h2>Kaan Aydınlı</h2>
     <div class="Me">
       <div class="Who">
-        <p style = "text-align: center;"><b>Who Am I?</b></p>
+        <p style="text-align: center"><b>Who Am I?</b></p>
         <p>I am a passionate Computer Science student at Bilkent University.</p>
         <p>My hobbies are playing chess, swimming, fitness, coding.</p>
         <p>I am in the Water Polo team at Bilkent.</p>
@@ -172,7 +201,7 @@
         <p></p>
       </div>
       <div class="What">
-        <p style = "text-align: center;"><b>What do I do?</b></p>
+        <p style="text-align: center"><b>What do I do?</b></p>
         <p>I have done multiple projects with Java.</p>
         <p>I'm currently learning HTML, CSS and JavaScript.</p>
         <p></p>
@@ -182,9 +211,6 @@
     <a href="/index.html"> Go Back</a>
     <p class="reach">Reach out to me: <em>necatikaanaydinli@gmail.com</em></p>
 
-    <script>
-
-
-    </script>
+    <script></script>
   </body>
 </html>
